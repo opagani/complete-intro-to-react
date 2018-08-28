@@ -1,24 +1,23 @@
 import React from "react";
-import ReactDOM from "react-dom"
-import Pet from "./Pet";
+import { render } from "react-dom";
+import { Router, Link } from "@reach/router";
+import Results from "./Results";
+import Details from "./Details";
 
 class App extends React.Component {
   render() {
-    return React.createElement("div", {}, [
-      React.createElement("h1", {}, "Adopt Me!"),
-      React.createElement(Pet, {
-        name: "Luna",
-        animal: "Dog",
-        breed: "Havanese"
-      }),
-      React.createElement(Pet, {
-        name: "Pepper",
-        animal: "Bird",
-        breed: "Cockatiel"
-      }),
-      React.createElement(Pet, { name: "Doink", animal: "Cat", breed: "Mix" })
-    ]);
+    return (
+      <div>
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
+        <Router>
+          <Results path="/" />
+          <Details path="/details/:id" />
+        </Router>
+      </div>
+    );
   }
 }
 
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+render(<App />, document.getElementById("root"));
