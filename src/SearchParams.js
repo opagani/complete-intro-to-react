@@ -22,7 +22,8 @@ class Search extends React.Component {
   handleAnimalChange = event => {
     this.setState(
       {
-        animal: event.target.value
+        animal: event.target.value,
+        breed: ""
       },
       this.getBreeds
     );
