@@ -1,0 +1,34 @@
+{
+  "name": "complete-intro-to-react",
+  "version": "1.0.0",
+  "description": "Complete intro to React as of August 2018",
+  "main": "src/App.js",
+  "scripts": {
+    "test": "",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opagani/complete-intro-to-react.git"
+  },
+  "author": "Oscar Pagani <paganio@yahoo.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/opagani/complete-intro-to-react/issues"
+  },
+  "homepage": "https://github.com/opagani/complete-intro-to-react#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "parcel-bundler": "^1.9.7",
+    "prettier": "^1.14.2"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
