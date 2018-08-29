@@ -1,10 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Router } from "@reach/router";
+import React from "preact-compat";
+import ReactDOM from "preact-compat";
+import { Router, Link } from "preact-router";
 import pf from "petfinder-client";
 import Results from "./Results";
 import Details from "./Details";
-import NavBar from "./NavBar";
 import SearchParams from "./SearchParams";
 import { Provider } from "./SearchContext";
 
@@ -73,7 +72,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <header>
+          <Link href="/">Adopt Me!</Link>
+          <Link href="/search-params">
+            <span aria-label="search" role="img">
+              🔍
+            </span>
+          </Link>
+        </header>
         <Provider value={this.state}>
           <Router>
             <Results path="/" />
